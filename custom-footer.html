@@ -1,0 +1,60 @@
+    <style>
+    	/* NOTE: You can use the custom CSS configuration to move this CSS your own stylesheet. */
+
+    	/* Overwrite default footer styles to make room at the bottom of the browser page for our custom footer... */
+    	html, body {
+            height: 100%;
+        }
+	#dvfooter {
+  	    display: none;
+	}
+        #content.container {
+         	min-height: calc(100% - 180px); /*210px */
+            margin-bottom: -64px;
+	}
+        #content.container:after {
+        	content: "";
+        	display: block;
+        }
+        #footer {
+			color: #a9a9a9; margin-top:0px; padding-bottom:0px; bottom:-130px; position: relative;
+		}
+        
+		/* Place custom footer just above default footer at the bottom of the page... */
+        #custom-footer, #content.container:after {
+            height: 92px; /*142*/ 
+        }
+        #custom-footer {
+		background-image: url('/logos/1/Base-plataforma-datacocha.jpg'), linear-gradient(#01772d,#05270e);
+            	background-repeat: no-repeat;
+		background-position: center;
+		color: #a9a9a9; min-height: 160px; padding: 1.25em 0 100px 0;
+		}
+		#custom-footer a {
+			color: #fff
+
+		}
+    </style>
+    <div id="custom-footer">
+    	<div class="container">
+    		
+<!-- Place in the header of your HTML. -->
+<script src="http://static.lib.virginia.edu/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+<link rel="import" href="http://static.lib.virginia.edu/bower_components/uvalib-footer/uvalib-footer.html">
+
+<!-- Replace the DIV with ID=footer with the code below, which includes the Dataverse section that you need.-->
+<!-- Basically you wrap the uvalib-footer component around the required DIV and add a slot attribute with the value "bottom-bar". -->
+<uvalib-footer>
+	<div class="row" slot="bottom-bar">
+		<div class="col-sm-8">
+			<p>Copyright © 2023, Instituto Nacional de Investigación en Glaciares y Ecosistemas de Montaña &nbsp;|&nbsp; 
+		 		<a href="https://www.google.com"> Privacy Policy</a>
+			</p>
+		</div>
+	</div>
+</uvalib-footer>
+		
+		
+		
+    	</div>
+    </div>

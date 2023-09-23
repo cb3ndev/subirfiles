@@ -1,0 +1,50 @@
+    <style>
+        /* NOTE: You can use the custom CSS configuration to move this CSS your own stylesheet... */
+
+        /* Overwrite default navbar styles to make room at the top of the browser page for our custom header... */
+        .navbar-fixed-top {
+            top: -11px !important;
+	    position: relative !important;
+        }
+
+	.navbar-default {
+ 	    border-bottom: 0px !important;
+	    background-image: none !important;
+	}
+	/*Customization of the Logo in the navbar*/
+	#navbarFixed .navbar-brand.custom-logo {
+  	    height: 55px;
+  	    padding: 0;
+	}
+/*	
+	#navbarFixed form.navbar-form-link a.ui-commandlink, #navbarFixed ul.navbar-nav li.dropdown span.dropdown-toggle {
+	    color: #fff;
+	}
+	.navbar-default .navbar-nav > li > a {
+ 	    color: #fff;
+	}
+*/
+        #dataverse-header-block {
+            padding-top: 11px;
+        }
+
+	/* Place narrow custom header at the top of the page... */
+	#custom-header {
+	    background: url('/logos/1/Cabecera-plataforma-datacocha.jpg'), linear-gradient(#1f4c8e,38%,#b6c8da);
+	    background-repeat: no-repeat;
+	    background-position: center;
+            min-height: 142px;
+            /*position: fixed;*/
+            right: 0;
+            left: 0;
+            z-index: 930;
+            padding-top: 8px;
+	    padding-bottom: 8px;
+        }
+        #custom-header a.cst-hdr-link {
+            line-height: 32px;
+            color: #3f804d;
+            font-weight: bold;
+        }
+    </style>
+    <div id="custom-header">  </div>
